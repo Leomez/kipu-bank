@@ -14,7 +14,7 @@ contract KipuBank {
     /// @param balanceAfter Nuevo saldo de la cuenta del usuario luego del depósito.
     event Deposit(address indexed who, uint256 amount, uint256 balanceAfter);
 
-    /// @notice Se emite cuando un usuario retira ETH de su cuenta.
+    /// @notice Se emite cuando un usuario retira ETH de su cuenta
     /// @param who Direccion de quien retira.
     /// @param amount Cantidad de ETH que retira (en wei).
     /// @param balanceAfter Nuevo saldo de la cuenta del usuario luego del retiro.
