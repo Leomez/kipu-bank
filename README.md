@@ -4,7 +4,7 @@
 - Existe un **límite global** (BANK_CAP) —el máximo total de ETH que el banco puede contener— fijado en deploy.
 - Existe un **límite por retiro** (WITHDRAW_LIMIT) —máximo que se puede retirar por transacción— fijado en deploy (inmutable).
 - Se usan **errores personalizados**, **events**, y **patrones de seguridad** (checks-effects-interactions, reentrancy guard).
-- El contrato está pensado para **testnets** y como base para un portafolio Web3.
+
 
 ---
 
@@ -38,9 +38,9 @@ kipu-bank/
 
 ## Cómo desplegar en Remix (guía paso a paso)
 
-> Recomendado: usa la red **Sepolia** o la testnet que elijas. Asegúrate de tener MetaMask configurado.
+> Recomendado: usa la red **Sepolia** o la testnet que elijas. Asegurate de tener MetaMask configurado.
 
-1. Abrá [Remix IDE](https://remix.ethereum.org).
+1. Abrí [Remix IDE](https://remix.ethereum.org).
 2. Creá el archivo `contracts/KipuBank.sol` y pega el contenido del contrato.
 3. Compilá:
    - Panel "Solidity Compiler"
@@ -48,7 +48,7 @@ kipu-bank/
    - Presiona "Compile".
 4. Conecta MetaMask:
    - En "Deploy & Run Transactions", en "Environment" selecciona "Injected Provider - MetaMask".
-   - Cambia MetaMask a la testnet (ej. Sepolia) y obtén ETH de faucet si necesitas.
+   - Cambia MetaMask a la testnet (ej. Sepolia) y obtené ETH de faucet si necesitas.
 5. Despliegue:
    - En `Deploy` configura los parámetros del constructor:
      - `bankCap_`: cantidad en wei (p. ej. `1000000000000000000` para 1 ETH).
@@ -57,8 +57,8 @@ kipu-bank/
    - Confirmá la transacción en MetaMask.
 6. Interactuar:
    - `deposit()` — ingresá ethers en el campo "value" (en ETH), luego pulsa `deposit`.
-   - `getBalance(address)` — consulta el balance de cualquier dirección.
-   - `withdraw(amount)` — especifica la cantidad en wei y ejecuta para retirar.
+   - `getBalance(address)` — consultá el balance de cualquier dirección.
+   - `withdraw(amount)` — especificá la cantidad en wei y ejecutá para retirar.
    - `getDepositCount(address)` → cantidad de depósitos del usuario.
    - `getWithdrawCount(address)` → cantidad de retiros del usuario.
    - `summary()` → muestra los valores globales (BANK_CAP, WITHDRAW_LIMIT, totalBankBalance).
